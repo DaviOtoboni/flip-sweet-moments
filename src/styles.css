@@ -2,6 +2,20 @@
 @source "../src";
 @import "tw-animate-css";
 
+@theme inline {
+  --color-romance-bg: var(--romance-bg);
+  --color-romance-ink: var(--romance-ink);
+  --color-romance-rose: var(--romance-rose);
+  --color-romance-blush: var(--romance-blush);
+  --color-romance-cream: var(--romance-cream);
+  --background-image-romance-glow: radial-gradient(
+    ellipse at top,
+    var(--romance-blush) 0%,
+    transparent 60%
+  );
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /*
