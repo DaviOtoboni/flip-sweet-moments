@@ -76,6 +76,11 @@
 }
 
 :root {
+  --romance-bg: oklch(0.985 0.012 20);
+  --romance-cream: oklch(0.97 0.02 30);
+  --romance-blush: oklch(0.92 0.05 15);
+  --romance-rose: oklch(0.62 0.17 15);
+  --romance-ink: oklch(0.28 0.04 20);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
