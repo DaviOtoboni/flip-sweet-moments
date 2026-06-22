@@ -13,8 +13,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Nosso Amor — Memórias & Momentos" },
       {
         property: "og:description",
-        content:
-          "Galeria interativa com flip cards e mosaico do Instagram/Facebook.",
+        content: "Galeria interativa com flip cards e mosaico do Instagram/Facebook.",
       },
     ],
   }),
@@ -111,13 +110,8 @@ function Index() {
           <Heart className="h-3.5 w-3.5 fill-current" /> Feito com amor
         </div>
         <h1 className="font-display mt-6 text-5xl leading-tight md:text-7xl">
-          Nossos momentos,{" "}
-          <span className="italic text-romance-rose">para sempre</span>
+          Nossos momentos, <span className="italic text-romance-rose">para sempre</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-xl text-base text-romance-ink/70 md:text-lg">
-          Passe o mouse (ou toque) em cada cartão para virar a página e
-          descobrir uma pequena memória do nosso amor.
-        </p>
       </section>
 
       {/* GALERIA — FLIP CARDS */}
@@ -149,12 +143,8 @@ function Index() {
                 {/* VERSO — TEXTO */}
                 <div className="flip-card-face flip-card-back">
                   {/* <!-- INSIRA SEU TEXTO DO VERSO AQUI --> */}
-                  <h3 className="font-display text-2xl text-romance-rose">
-                    {card.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-romance-ink/80">
-                    {card.text}
-                  </p>
+                  <h3 className="font-display text-2xl text-romance-rose">{card.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-romance-ink/80">{card.text}</p>
                   <Heart className="mt-5 h-5 w-5 fill-current text-romance-rose" />
                 </div>
               </div>
@@ -167,12 +157,8 @@ function Index() {
       <section className="border-t border-romance-rose/15 bg-white/40 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.25em] text-romance-rose">
-              @nosso.amor
-            </p>
-            <h2 className="font-display mt-3 text-3xl md:text-4xl">
-              Nos siga nas redes
-            </h2>
+            <p className="text-xs uppercase tracking-[0.25em] text-romance-rose">@nosso.amor</p>
+            <h2 className="font-display mt-3 text-3xl md:text-4xl">Nos siga nas redes</h2>
             <p className="mx-auto mt-2 max-w-md text-sm text-romance-ink/70">
               Clique em qualquer foto para abrir a postagem original.
             </p>
