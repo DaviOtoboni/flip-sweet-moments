@@ -134,10 +134,6 @@ function Index() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-romance-ink/40 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center gap-2 text-sm font-medium text-white">
-                    <Heart className="h-4 w-4 fill-current" />
-                    Vire o cartão
-                  </div>
                 </div>
 
                 {/* VERSO — TEXTO */}
@@ -157,11 +153,7 @@ function Index() {
       <section className="border-t border-romance-rose/15 bg-white/40 px-6 py-20">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
-            <p className="text-xs uppercase tracking-[0.25em] text-romance-rose">@nosso.amor</p>
-            <h2 className="font-display mt-3 text-3xl md:text-4xl">Nos siga nas redes</h2>
-            <p className="mx-auto mt-2 max-w-md text-sm text-romance-ink/70">
-              Clique em qualquer foto para abrir a postagem original.
-            </p>
+            <h2 className="font-display text-3xl md:text-4xl">Parte da nossa história</h2>
           </div>
 
           <div className="mt-10 grid grid-cols-3 gap-2 sm:gap-3 md:grid-cols-6">
