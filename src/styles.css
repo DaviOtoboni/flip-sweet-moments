@@ -217,3 +217,9 @@
   text-align: center;
   padding: 2rem;
 }
+
+/* Barrinhas animadas do player de áudio */
+@keyframes audioBar {
+  0% { transform: scaleY(0.4); }
+  100% { transform: scaleY(1); }
+}
