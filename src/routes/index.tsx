@@ -7,6 +7,7 @@ import euElaImg from "../img/eu_ela.jpeg";
 import peiImg from "../img/pei.jpg";
 import voImg from "../img/vo.jpg";
 import audioMsc from "../msc/tchan.wav";
+import roseImg from "../img/red_rose_corner.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,38 +34,38 @@ export const Route = createFileRoute("/")({
 const flipCards = [
   {
     // <!-- INSIRA SUA FOTO AQUI -->
-    image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80",
+    image: "./src/img/cara_mau.jpg",
     alt: "Momento especial 1",
     // <!-- INSIRA SEU TEXTO DO VERSO AQUI -->
     title: "Nosso primeiro encontro",
     text: "Aquele dia em que tudo começou e o coração não parou de sorrir.",
   },
   {
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&q=80",
+    image: "./src/img/ela_1.jpg",
     alt: "Momento especial 2",
     title: "Pequenos gestos",
     text: "Um abraço apertado vale mais que mil palavras.",
   },
   {
-    image: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=800&q=80",
+    image: "./src/img/eu_ela_2.jpg",
     alt: "Momento especial 3",
     title: "Viagens juntos",
     text: "Explorar o mundo ao seu lado é a melhor aventura.",
   },
   {
-    image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&q=80",
+    image: "./src/img/ela_vestido.jpg",
     alt: "Momento especial 4",
     title: "Dias preguiçosos",
     text: "Manhãs lentas, café e você. Perfeição.",
   },
   {
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800&q=80",
+    image: "./src/img/tchan.jpg",
     alt: "Momento especial 5",
     title: "Risadas sem fim",
     text: "Você é o motivo dos meus sorrisos mais sinceros.",
   },
   {
-    image: "https://images.unsplash.com/photo-1525361531253-bd17f3536263?w=800&q=80",
+    image: "./src/img/princesinha.jpg",
     alt: "Momento especial 6",
     title: "Para sempre",
     text: "Cada dia ao seu lado é uma página nova da nossa história.",
@@ -81,7 +82,7 @@ const socialPosts = [
     label: "Ver no Instagram",
   },
   {
-    image: euElaImg,
+    image: "./src/img/eu_ela_3.webp",
     href: "https://www.facebook.com/share/p/14fZtgtRbbz/",
     label: "Ver no Facebook",
   },
@@ -91,17 +92,17 @@ const socialPosts = [
     label: "Ver no Instagram",
   },
   {
-    image: voImg,
+    image: "./src/img/eu_ela.jpeg",
     href: "https://www.facebook.com/nuria.paula.2025/posts/pfbid0y55qz9cm7PqGr57pUzjtWDqQJDjJPMJZwXbSBkTNkpbBskqn5rZbtg84S5jHnwYil",
     label: "Ver no Facebook",
   },
   {
-    image: euElaImg,
+    image: "./src/img/eu_ela_4.webp",
     href: "https://www.instagram.com/p/DHKSMw9t4UGoZqqI-CtFr7FvDA8wBVH2Ckguxs0/",
     label: "Ver no Instagram",
   },
   {
-    image: direitoImg,
+    image: "./src/img/direito_2.jpeg",
     href: "https://www.instagram.com/p/B3ukfuFlGNKsyD22GO8w2jVkCM8iKMm-_Vb4qM0/?img_index=2",
     label: "Ver no Instagram",
   },
@@ -123,6 +124,7 @@ function Index() {
   useEffect(() => {
     const a = audioRef.current;
     if (!a) return;
+    a.volume = 0.1; // Volume mais baixo (10%)
     const onPlay = () => setIsPlaying(true);
     const onPause = () => setIsPlaying(false);
     const onEnded = () => setIsPlaying(false);
@@ -147,7 +149,37 @@ function Index() {
   };
 
   return (
-    <main className="min-h-screen bg-romance-bg text-romance-ink">
+    <main className="min-h-screen bg-romance-bg text-romance-ink relative overflow-hidden">
+      {/* ROSAS DECORATIVAS NOS CANTOS */}
+      <img
+        src={roseImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 left-0 z-50 w-28 md:w-40 opacity-80"
+        style={{ transform: "rotate(-30deg) translate(-18%, -18%)" }}
+      />
+      <img
+        src={roseImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute top-0 right-0 z-50 w-28 md:w-40 opacity-80"
+        style={{ transform: "scaleX(-1) rotate(-30deg) translate(-18%, -18%)" }}
+      />
+      <img
+        src={roseImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 z-50 w-28 md:w-40 opacity-80"
+        style={{ transform: "rotate(30deg) translate(-18%, 18%)" }}
+      />
+      <img
+        src={roseImg}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 right-0 z-50 w-28 md:w-40 opacity-80"
+        style={{ transform: "scaleX(-1) rotate(30deg) translate(-18%, 18%)" }}
+      />
+
       {/* HERO */}
       <section className="relative overflow-hidden px-6 pt-24 pb-20 text-center">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-romance-glow opacity-70" />
