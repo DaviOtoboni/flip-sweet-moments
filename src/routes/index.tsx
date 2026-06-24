@@ -2,6 +2,12 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Heart, Play, Pause } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
+import direitoImg from "../img/direito.jpeg";
+import euElaImg from "../img/eu_ela.jpeg";
+import peiImg from "../img/pei.jpg";
+import voImg from "../img/vo.jpg";
+import audioMsc from "../msc/tchan.wav";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -70,33 +76,33 @@ const flipCards = [
    ========================================================================= */
 const socialPosts = [
   {
-    image: "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?w=400&q=80",
-    href: "https://www.instagram.com/p/SEU_POST_AQUI/",
+    image: direitoImg,
+    href: "https://www.instagram.com/p/CRL6Qa0MmNKSrWeO887XmRv9D7Am992e7fFNpU0/",
     label: "Ver no Instagram",
   },
   {
-    image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=400&q=80",
-    href: "https://www.facebook.com/SEU_POST_AQUI",
+    image: euElaImg,
+    href: "https://www.facebook.com/share/p/14fZtgtRbbz/",
     label: "Ver no Facebook",
   },
   {
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=80",
-    href: "https://www.instagram.com/p/SEU_POST_AQUI/",
+    image: peiImg,
+    href: "https://www.instagram.com/nuria.eliziario/p/DHMth_OuSYvX4JXPhHCCHjPuj1JFqIyjIFd6Nk0/?img_index=3",
     label: "Ver no Instagram",
   },
   {
-    image: "https://images.unsplash.com/photo-1525361531253-bd17f3536263?w=400&q=80",
-    href: "https://www.instagram.com/p/SEU_POST_AQUI/",
-    label: "Ver no Instagram",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=400&q=80",
-    href: "https://www.facebook.com/SEU_POST_AQUI",
+    image: voImg,
+    href: "https://www.facebook.com/nuria.paula.2025/posts/pfbid0y55qz9cm7PqGr57pUzjtWDqQJDjJPMJZwXbSBkTNkpbBskqn5rZbtg84S5jHnwYil",
     label: "Ver no Facebook",
   },
   {
-    image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&q=80",
-    href: "https://www.instagram.com/p/SEU_POST_AQUI/",
+    image: euElaImg,
+    href: "https://www.instagram.com/p/DHKSMw9t4UGoZqqI-CtFr7FvDA8wBVH2Ckguxs0/",
+    label: "Ver no Instagram",
+  },
+  {
+    image: direitoImg,
+    href: "https://www.instagram.com/p/B3ukfuFlGNKsyD22GO8w2jVkCM8iKMm-_Vb4qM0/?img_index=2",
     label: "Ver no Instagram",
   },
 ];
@@ -106,7 +112,7 @@ const socialPosts = [
       Você pode colocar um arquivo em `public/` (ex: public/nossa-musica.mp3)
       e usar "/nossa-musica.mp3", ou usar um link externo (https://...).
    ========================================================================= */
-const AUDIO_SRC = "/nossa-musica.mp3"; // <!-- INSIRA SUA MÚSICA AQUI -->
+const AUDIO_SRC = audioMsc; // <!-- INSIRA SUA MÚSICA AQUI -->
 const AUDIO_TITLE = "Nossa música"; // <!-- TÍTULO DA MÚSICA -->
 const AUDIO_ARTIST = "Para sempre nós"; // <!-- ARTISTA / DEDICATÓRIA -->
 
