@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Heart } from "lucide-react";
+import { Heart, Play, Pause } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
