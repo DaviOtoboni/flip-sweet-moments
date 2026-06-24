@@ -101,7 +101,45 @@ const socialPosts = [
   },
 ];
 
+/* =========================================================================
+   3) MÚSICA — substitua o caminho abaixo pelo arquivo de áudio desejado.
+      Você pode colocar um arquivo em `public/` (ex: public/nossa-musica.mp3)
+      e usar "/nossa-musica.mp3", ou usar um link externo (https://...).
+   ========================================================================= */
+const AUDIO_SRC = "/nossa-musica.mp3"; // <!-- INSIRA SUA MÚSICA AQUI -->
+const AUDIO_TITLE = "Nossa música"; // <!-- TÍTULO DA MÚSICA -->
+const AUDIO_ARTIST = "Para sempre nós"; // <!-- ARTISTA / DEDICATÓRIA -->
+
 function Index() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const a = audioRef.current;
+    if (!a) return;
+    const onPlay = () => setIsPlaying(true);
+    const onPause = () => setIsPlaying(false);
+    const onEnded = () => setIsPlaying(false);
+    a.addEventListener("play", onPlay);
+    a.addEventListener("pause", onPause);
+    a.addEventListener("ended", onEnded);
+    return () => {
+      a.removeEventListener("play", onPlay);
+      a.removeEventListener("pause", onPause);
+      a.removeEventListener("ended", onEnded);
+    };
+  }, []);
+
+  const togglePlay = () => {
+    const a = audioRef.current;
+    if (!a) return;
+    if (a.paused) {
+      void a.play().catch(() => setIsPlaying(false));
+    } else {
+      a.pause();
+    }
+  };
+
   return (
     <main className="min-h-screen bg-romance-bg text-romance-ink">
       {/* HERO */}
@@ -110,10 +148,57 @@ function Index() {
         <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-romance-rose/40 bg-white/60 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-romance-rose backdrop-blur">
           <Heart className="h-3.5 w-3.5 fill-current" /> Feito com amor
         </div>
-        <h1 className="font-display mt-6 text-5xl leading-tight md:text-7xl">
+
+        {/* PLAYER DE ÁUDIO — clique para tocar/pausar */}
+        <div className="mx-auto mt-8 flex max-w-sm items-center gap-4 rounded-2xl border border-romance-rose/30 bg-white/70 p-3 pr-5 shadow-[0_10px_30px_-12px_rgba(190,90,110,0.35)] backdrop-blur">
+          <button
+            type="button"
+            onClick={togglePlay}
+            aria-label={isPlaying ? "Pausar música" : "Tocar música"}
+            aria-pressed={isPlaying}
+            className="group relative flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-romance-rose text-white shadow-md transition-transform duration-300 hover:scale-105 active:scale-95"
+          >
+            {isPlaying ? (
+              <Pause className="h-5 w-5 fill-current" />
+            ) : (
+              <Play className="ml-0.5 h-5 w-5 fill-current" />
+            )}
+            {isPlaying && (
+              <span className="absolute inset-0 -z-10 animate-ping rounded-full bg-romance-rose/40" />
+            )}
+          </button>
+          <div className="flex flex-1 flex-col items-start text-left">
+            <span className="font-display text-base leading-tight text-romance-ink">
+              {AUDIO_TITLE}
+            </span>
+            <span className="text-[11px] uppercase tracking-[0.18em] text-romance-rose/80">
+              {AUDIO_ARTIST}
+            </span>
+            {/* barrinhas animadas decorativas */}
+            <div className="mt-2 flex h-3 items-end gap-[3px]">
+              {[0, 1, 2, 3, 4, 5, 6].map((i) => (
+                <span
+                  key={i}
+                  className="w-[3px] rounded-full bg-romance-rose/70"
+                  style={{
+                    height: isPlaying ? `${30 + ((i * 37) % 70)}%` : "20%",
+                    animation: isPlaying
+                      ? `audioBar 0.9s ease-in-out ${i * 0.08}s infinite alternate`
+                      : "none",
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+          {/* <!-- INSIRA SUA MÚSICA AQUI (também na constante AUDIO_SRC no topo do arquivo) --> */}
+          <audio ref={audioRef} src={AUDIO_SRC} preload="none" loop />
+        </div>
+
+        <h1 className="font-display mt-10 text-5xl leading-tight md:text-7xl">
           Nossos momentos, <span className="italic text-romance-rose">para sempre</span>
         </h1>
       </section>
+
 
       {/* GALERIA — FLIP CARDS */}
       <section className="px-6 pb-24">
