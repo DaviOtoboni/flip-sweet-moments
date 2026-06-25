@@ -88,7 +88,7 @@ const socialPosts = [
     label: "Ver no Instagram",
   },
   {
-    image: "./src/img/eu_ela_3.webp",
+    image: euEla3Img,
     href: "https://www.facebook.com/share/p/14fZtgtRbbz/",
     label: "Ver no Facebook",
   },
@@ -98,17 +98,17 @@ const socialPosts = [
     label: "Ver no Instagram",
   },
   {
-    image: "./src/img/eu_ela.jpeg",
+    image: euElaImg,
     href: "https://www.facebook.com/nuria.paula.2025/posts/pfbid0y55qz9cm7PqGr57pUzjtWDqQJDjJPMJZwXbSBkTNkpbBskqn5rZbtg84S5jHnwYil",
     label: "Ver no Facebook",
   },
   {
-    image: "./src/img/eu_ela_4.webp",
+    image: euEla4Img,
     href: "https://www.instagram.com/p/DHKSMw9t4UGoZqqI-CtFr7FvDA8wBVH2Ckguxs0/",
     label: "Ver no Instagram",
   },
   {
-    image: "./src/img/direito_2.jpeg",
+    image: direito2Img,
     href: "https://www.instagram.com/p/B3ukfuFlGNKsyD22GO8w2jVkCM8iKMm-_Vb4qM0/?img_index=2",
     label: "Ver no Instagram",
   },
