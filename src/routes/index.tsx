@@ -41,39 +41,37 @@ export const Route = createFileRoute("/")({
    ========================================================================= */
 const flipCards = [
   {
-    // <!-- INSIRA SUA FOTO AQUI -->
-    image: "./src/img/cara_mau.jpg",
+    image: caraMauImg,
     alt: "Momento especial 1",
-    // <!-- INSIRA SEU TEXTO DO VERSO AQUI -->
     title: "Sorriso de sol",
     text: "Você é tão maravilhosa que meu mundo fica mais iluminado, sempre que você aparece.",
   },
   {
-    image: "./src/img/ela_1.jpg",
+    image: ela1Img,
     alt: "Momento especial 2",
     title: "Você.",
     text: "Quando te olho, parece que meu mundo vira do avesso e tudo fica em câmera lenta!",
   },
   {
-    image: "./src/img/eu_ela_2.jpg",
+    image: euEla2Img,
     alt: "Momento especial 3",
     title: "Nós.",
     text: "Espero que o pessoal olhe para gente e pense\n'Espero ter algo tão lindo como o contato que eles tem'",
   },
   {
-    image: "./src/img/ela_vestido.jpg",
+    image: elaVestidoImg,
     alt: "Momento especial 4",
     title: "Gostosa!",
     text: "Quero sempre passear nas suas curvas...",
   },
   {
-    image: "./src/img/tchan.jpg",
+    image: tchanImg,
     alt: "Momento especial 5",
     title: "Para sempres nós.",
     text: "Te amo ardentemente!",
   },
   {
-    image: "./src/img/princesinha.jpg",
+    image: princesinhaImg,
     alt: "Momento especial 6",
     title: "Princesinha",
     text: "Parece que você saiu de um filme de princesas da Disney.\nTa perdida princesa?",
