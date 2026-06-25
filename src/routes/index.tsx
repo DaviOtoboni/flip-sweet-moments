@@ -3,11 +3,19 @@ import { Heart, Play, Pause } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import direitoImg from "../img/direito.jpeg";
+import direito2Img from "../img/direito_2.jpeg";
 import euElaImg from "../img/eu_ela.jpeg";
+import euEla3Img from "../img/eu_ela_3.webp";
+import euEla4Img from "../img/eu_ela_4.webp";
 import peiImg from "../img/pei.jpg";
-import voImg from "../img/vo.jpg";
 import audioMsc from "../msc/tchan.wav";
 import roseImg from "../img/red_rose_corner.png";
+import caraMauImg from "../img/cara_mau.jpg";
+import ela1Img from "../img/ela_1.jpg";
+import euEla2Img from "../img/eu_ela_2.jpg";
+import elaVestidoImg from "../img/ela_vestido.jpg";
+import tchanImg from "../img/tchan.jpg";
+import princesinhaImg from "../img/princesinha.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
