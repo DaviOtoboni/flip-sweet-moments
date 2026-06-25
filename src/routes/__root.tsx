@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Você é meu Tchan" },
+      { name: "description", content: "Pagina designada à uma minha namorada, comemoração do aniversario de namoro!" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Você é meu Tchan" },
+      { property: "og:description", content: "Pagina designada à uma minha namorada, comemoração do aniversario de namoro!" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Você é meu Tchan" },
+      { name: "twitter:description", content: "Pagina designada à uma minha namorada, comemoração do aniversario de namoro!" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/58786f70-ab52-496b-ad37-583e949721d3" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/58786f70-ab52-496b-ad37-583e949721d3" },
     ],
     links: [
       {
