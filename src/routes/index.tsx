@@ -3,11 +3,19 @@ import { Heart, Play, Pause } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import direitoImg from "../img/direito.jpeg";
+import direito2Img from "../img/direito_2.jpeg";
 import euElaImg from "../img/eu_ela.jpeg";
+import euEla3Img from "../img/eu_ela_3.webp";
+import euEla4Img from "../img/eu_ela_4.webp";
 import peiImg from "../img/pei.jpg";
-import voImg from "../img/vo.jpg";
 import audioMsc from "../msc/tchan.wav";
 import roseImg from "../img/red_rose_corner.png";
+import caraMauImg from "../img/cara_mau.jpg";
+import ela1Img from "../img/ela_1.jpg";
+import euEla2Img from "../img/eu_ela_2.jpg";
+import elaVestidoImg from "../img/ela_vestido.jpg";
+import tchanImg from "../img/tchan.jpg";
+import princesinhaImg from "../img/princesinha.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,39 +41,37 @@ export const Route = createFileRoute("/")({
    ========================================================================= */
 const flipCards = [
   {
-    // <!-- INSIRA SUA FOTO AQUI -->
-    image: "./src/img/cara_mau.jpg",
+    image: caraMauImg,
     alt: "Momento especial 1",
-    // <!-- INSIRA SEU TEXTO DO VERSO AQUI -->
     title: "Sorriso de sol",
     text: "Você é tão maravilhosa que meu mundo fica mais iluminado, sempre que você aparece.",
   },
   {
-    image: "./src/img/ela_1.jpg",
+    image: ela1Img,
     alt: "Momento especial 2",
     title: "Você.",
     text: "Quando te olho, parece que meu mundo vira do avesso e tudo fica em câmera lenta!",
   },
   {
-    image: "./src/img/eu_ela_2.jpg",
+    image: euEla2Img,
     alt: "Momento especial 3",
     title: "Nós.",
     text: "Espero que o pessoal olhe para gente e pense\n'Espero ter algo tão lindo como o contato que eles tem'",
   },
   {
-    image: "./src/img/ela_vestido.jpg",
+    image: elaVestidoImg,
     alt: "Momento especial 4",
     title: "Gostosa!",
     text: "Quero sempre passear nas suas curvas...",
   },
   {
-    image: "./src/img/tchan.jpg",
+    image: tchanImg,
     alt: "Momento especial 5",
     title: "Para sempres nós.",
     text: "Te amo ardentemente!",
   },
   {
-    image: "./src/img/princesinha.jpg",
+    image: princesinhaImg,
     alt: "Momento especial 6",
     title: "Princesinha",
     text: "Parece que você saiu de um filme de princesas da Disney.\nTa perdida princesa?",
@@ -82,7 +88,7 @@ const socialPosts = [
     label: "Ver no Instagram",
   },
   {
-    image: "./src/img/eu_ela_3.webp",
+    image: euEla3Img,
     href: "https://www.facebook.com/share/p/14fZtgtRbbz/",
     label: "Ver no Facebook",
   },
@@ -92,17 +98,17 @@ const socialPosts = [
     label: "Ver no Instagram",
   },
   {
-    image: "./src/img/eu_ela.jpeg",
+    image: euElaImg,
     href: "https://www.facebook.com/nuria.paula.2025/posts/pfbid0y55qz9cm7PqGr57pUzjtWDqQJDjJPMJZwXbSBkTNkpbBskqn5rZbtg84S5jHnwYil",
     label: "Ver no Facebook",
   },
   {
-    image: "./src/img/eu_ela_4.webp",
+    image: euEla4Img,
     href: "https://www.instagram.com/p/DHKSMw9t4UGoZqqI-CtFr7FvDA8wBVH2Ckguxs0/",
     label: "Ver no Instagram",
   },
   {
-    image: "./src/img/direito_2.jpeg",
+    image: direito2Img,
     href: "https://www.instagram.com/p/B3ukfuFlGNKsyD22GO8w2jVkCM8iKMm-_Vb4qM0/?img_index=2",
     label: "Ver no Instagram",
   },
