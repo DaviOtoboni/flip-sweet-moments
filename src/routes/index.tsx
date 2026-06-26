@@ -279,6 +279,15 @@ function Index() {
         </div>
       </section>
 
+      {/* CITAÇÃO ROMÂNTICA */}
+      <section className="px-6 pb-16">
+        <blockquote className="mx-auto max-w-3xl text-center">
+          <p className="font-display text-2xl italic leading-relaxed text-romance-rose md:text-3xl">
+            “Você deve permitir que eu lhe diga o quão ardentemente eu a admiro e a amo.”
+          </p>
+        </blockquote>
+      </section>
+
       {/* MOSAICO DE REDES SOCIAIS */}
       <section className="border-t border-romance-rose/15 bg-white/40 px-6 py-20">
         <div className="mx-auto max-w-6xl">
